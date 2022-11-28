@@ -29,3 +29,4 @@ map Q gq
 sunmap Q
 inoremap <C-U> <C-G>u<C-U>
 syntax on
+nnoremap <silent> <C-l> :nohl<CR><C-l>
