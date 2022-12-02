@@ -12,7 +12,7 @@ set encoding=utf-8
 set wildmode=longest,list,full
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nnoremap S :%s//g<Left><Left>
-set mouse=
+set mouse=a
 set ttymouse=
 set nobackup
 set backspace=indent,eol,start
@@ -30,6 +30,8 @@ sunmap Q
 inoremap <C-U> <C-G>u<C-U>
 syntax on
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+set guicursor+=n:hor20-Cursor/lCursor
+set guicursor+=i:hor20-Cursor/lCursor
 
 call plug#begin()
 
@@ -46,3 +48,18 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
 nnoremap <C-b> :TagbarToggle<CR>
+
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
