@@ -1,3 +1,4 @@
+set clipboard+=unnamedplus
 set number relativenumber
 set tabstop=4
 set softtabstop=4
