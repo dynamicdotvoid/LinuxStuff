@@ -1,2 +1,2 @@
-# LinuxStuff
-random init scripts, useful if i'm putting linux on something
+# dotfiles
+handy init and config files used in a variety of places.
