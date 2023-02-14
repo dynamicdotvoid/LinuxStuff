@@ -6,3 +6,5 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 PS1='[\w]\$ '
+
+export PATH=$PATH:~/bin
