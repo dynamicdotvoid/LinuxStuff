@@ -1,2 +1,2 @@
-feh --bg-fill ~/wallpaper.png
+feh --bg-fill --randomize ~/wallpapers/* &
 exec dwm
