@@ -1,3 +1,3 @@
-FILENAME="$(find ~/wallpapers/ -type f | shuf -n1)"
-feh --bg-fill $FILENAME
-exec dwm
+/usr/bin/start-pulseaudio-x11 &
+feh --bg-fill .bg.png
+exec dwm > ~/.dwm.log
