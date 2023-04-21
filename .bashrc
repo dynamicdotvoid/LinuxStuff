@@ -9,3 +9,6 @@ PS1='[\u@\h \W]\$ '
 PS1='[\w]\$ '
 
 export PATH=$PATH:~/bin
+export SALAMANDER_ROOT=/home/lucas/programming/graphics/salamander-engine
+
+setxkbmap -layout us -variant dvp -option ctrl:swapcaps
