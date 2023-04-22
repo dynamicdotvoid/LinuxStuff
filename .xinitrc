@@ -1,3 +1,4 @@
 /usr/bin/start-pulseaudio-x11 &
-feh --bg-fill .bg.png
+setxkbmap -layout us -variant dvp -option ctrl:swapcaps
+feh --bg-fill ~/bg.png
 exec dwm > ~/.dwm.log
