@@ -1,0 +1,11 @@
+"/usr/bin/brightness-control /sys/class/backlight/gmux_backlight/brightness down 25"
+  XF86MonBrightnessDown
+
+"/usr/bin/brightness-control /sys/class/backlight/gmux_backlight/brightness up 25"
+  XF86MonBrightnessUp
+
+"/usr/bin/brightness-control /sys/devices/platform/applesmc.768/leds/smc::kbd_backlight/brightness down 25"
+  XF86KbdBrightnessDown
+
+"/usr/bin/brightness-control /sys/devices/platform/applesmc.768/leds/smc::kbd_backlight/brightness up 25"
+  XF86KbdBrightnessUp
