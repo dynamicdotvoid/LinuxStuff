@@ -4,9 +4,14 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias todolist='grep -r -n -H -C 3 "TODO:"'
 PS1='[\u@\h \W]\$ '
 PS1='[\w]\$ '
 
 export PATH=$PATH:~/bin
-export SALAMANDER_ROOT=/home/lucas/programming/graphics/salamander-engine
+export SALAMANDER_ROOT=~/programming/graphics/salamander-engine
+export BEMENU_PATH=/home/lucas/.config/bemenu
+export THEME_PATH=/home/lucas/.local/share/theme/
+alias gr='grep -r -n -H -C 3'
+PATH="$HOME/.local/bin:$PATH"
+
+export XAUTHORITY=/home/lucas/.Xauthority
