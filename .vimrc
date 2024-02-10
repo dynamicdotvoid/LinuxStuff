@@ -1,32 +1,35 @@
-set number relativenumber
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set autoindent
-set incsearch
-set hlsearch
-set clipboard=unnamedplus
-set expandtab
+" Tab and indent related functionality.
+set tabstop=4 "
+set softtabstop=4 " Number of spaces in a tab.
+set shiftwidth=4 " Number of auto-indent spaces.
+set autoindent " Auto-indent new lines.
+
+" File and formatting.
 set fileformat=unix
 set encoding=utf-8
-set wildmode=longest,list,full
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-nnoremap S :%s//g<Left><Left>
+
+" Unbind mouse interactions entirely.
 set mouse=
 set ttymouse=
-set nobackup
-set backspace=indent,eol,start
-set history=200
-set ruler
-set showcmd
-set wildmenu
-set ttimeout	
-set ttimeoutlen=100	
+
+" File display.
+set number relativenumber " Sets line numbers relative to the current line.
 set display=truncate
-set scrolloff=5
-set nrformats-=octal
-map Q gq
-sunmap Q
-inoremap <C-U> <C-G>u<C-U>
-syntax on
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+set showmatch " Show matching/closing parentheses and braces.
+syntax on " Enable syntax highlighting.
+
+" Unbinds arrow keys in normal and insert modes.
+for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+  exec 'noremap' key '<Nop>'
+  exec 'inoremap' key '<Nop>'
+endfor
+
+" Remap jk/kj to exitting normal mode.
+inoremap jk <esc>
+inoremap kj <esc>
+
+" Searching.
+set hlsearch " Highlights all search results.
+set incsearch " Search for strings incrementally
+" Binds C-l to unhighlighting search results temporarily.
+noremap <silent> <c-l> :nohls<cr><c-l>
