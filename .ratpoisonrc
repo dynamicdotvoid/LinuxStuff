@@ -1,0 +1,23 @@
+exec setbg
+exec /usr/bin/rpws init 4 -k
+
+set winname title
+set wingravity center
+set transgravity center
+set border 3
+set font "ProFont:size=22:antialiasing=false"
+set bgcolor #ffffff
+set fgcolor #000000
+
+escape M-t
+bind t exec term
+bind n exec firefox
+bind h exec menu
+
+bind g exec rpws 1
+bind c exec rpws 2
+bind r exec rpws 3 
+bind l exec rpws 4
+
+bind R restart
+bind q quit
