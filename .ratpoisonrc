@@ -4,14 +4,15 @@ exec /usr/bin/rpws init 4 -k
 set winname title
 set wingravity center
 set transgravity center
+set bargravity center
 set border 3
-set font "ProFont:size=22:antialiasing=false"
+set font "Spleen 16x32:size=24:antialiasing=false"
 set bgcolor #ffffff
 set fgcolor #000000
 
 escape M-t
 bind t exec term
-bind n exec firefox
+bind n exec qutebrowser
 bind h exec menu
 
 bind g exec rpws 1
