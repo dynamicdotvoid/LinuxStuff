@@ -6,7 +6,8 @@ set wingravity center
 set transgravity center
 set bargravity center
 set border 3
-set font "Spleen 16x32:size=24:antialiasing=false"
+set barborder 3
+set font "Cascadia Code:size=18"
 set bgcolor #ffffff
 set fgcolor #000000
 
@@ -15,10 +16,11 @@ bind t exec term
 bind n exec qutebrowser
 bind h exec menu
 
-bind g exec rpws 1
-bind c exec rpws 2
-bind r exec rpws 3 
-bind l exec rpws 4
+# bind g exec rpws 1
+# bind c exec rpws 2
+# bind r exec rpws 3 
+# bind l exec rpws 4
 
 bind R restart
+bind r remove
 bind q quit

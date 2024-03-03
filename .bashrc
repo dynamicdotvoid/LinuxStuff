@@ -14,11 +14,11 @@ export THEME_PATH=/home/lucas/.local/share/theme/
 export BRAWLHALLA_RUNNER_PATH=/home/lucas/programming/misc/bots/brawlhalla-bot/runner
 
 function gr {
-	grep -r -n -H -C 3
+	grep -r -n -H -C 3 $1 $2
 }
 
 function term {
-	alacritty
+	kitty
 }
 
 function menu {
@@ -34,11 +34,16 @@ function rmbg {
 	setbg
 }
 
+function btul {
+	export BW_SESSION=$(bw unlock --raw)
+}
+
 export -f gr
 export -f term
 export -f menu
 export -f setbg
 export -f rmbg
+export -f btul
 
 PATH="$HOME/.local/bin:$PATH"
 

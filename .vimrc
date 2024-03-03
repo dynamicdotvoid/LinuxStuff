@@ -1,6 +1,7 @@
 call plug#begin()
-Plug 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
+Plug 'https://github.com/bfrg/vim-cpp-modern.git'
 call plug#end()
+
 
 " Mouse support
 set mouse=a
@@ -73,15 +74,20 @@ set number relativenumber " Sets line numbers relative to the current line.
 set display=truncate
 set showmatch " Show matching/closing parentheses and braces.
 syntax on " Enable syntax highlighting.
-colorscheme tempus_totus
+
+" Open files relative to the current one.
+" set autochdir " Make the current working directory "follow" the current buffer.
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
 
 " Cursor options.
 set ttimeout
 set ttimeoutlen=1
 set ttyfast
 
-autocmd InsertEnter * set cursorline
-autocmd InsertLeave * set nocursorline
+" autocmd InsertEnter * set cursorline
+" autocmd InsertLeave * set nocursorline
 
 " Unbinds arrow keys in normal and insert modes.
 for key in ['<Up>', '<Down>', '<Left>', '<Right>']
