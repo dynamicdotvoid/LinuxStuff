@@ -4,8 +4,8 @@ call plug#end()
 
 
 " Mouse support
-set mouse=a
-set ttymouse=sgr
+set mouse=
+set ttymouse=
 set balloonevalterm
 
 " Styled and colored underline support
@@ -59,9 +59,9 @@ let &t_RT = "\e[23;2t"
 let &t_ut=''
 
 " Tab and indent related functionality.
-set tabstop=4 "
-set softtabstop=4 " Number of spaces in a tab.
-set shiftwidth=4 " Number of auto-indent spaces.
+set tabstop=8 "
+set softtabstop=8 " Number of spaces in a tab.
+set shiftwidth=8 " Number of auto-indent spaces.
 set autoindent " Auto-indent new lines.
 
 " File and formatting.
@@ -105,3 +105,4 @@ set incsearch " Search for strings incrementally
 " Binds C-l to unhighlighting search results temporarily.
 noremap <silent> <c-l> :nohls<cr><c-l>
 
+let @c = "ggO/* * filename:	=expand('%:t')€ýk:pu=strftime('%m.%d.%y')i * date:	€ýko * author:	Lucas Merritt/merrittlj * description:	 */€ýkkk$a"
