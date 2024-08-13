@@ -7,3 +7,5 @@ if [[ -f ~/.bashrc ]] ; then
 fi
 
 echo -e "\nWelcome to your cyberdeck, ${USER}. Your set reminders are: \n$(cat /home/${USER}/.reminders.data)\n"
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/lucas/.dotnet/tools"

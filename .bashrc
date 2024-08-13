@@ -38,13 +38,33 @@ function btul {
 	export BW_SESSION=$(bw unlock --raw)
 }
 
+function cura {
+	/home/lucas/builds/UltiMaker-Cura-5.8.0-linux-X64.AppImage -platformtheme gtk3
+}
+
+function uztd {
+	ls *.zip | awk -F'.zip' '{print "unzip "$0" -d "$1}' | sh
+}
+
 export -f gr
 export -f term
 export -f menu
 export -f setbg
 export -f rmbg
 export -f btul
+export -f cura
+export -f uztd
 
 PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin/$:$PATH"
 
 export XAUTHORITY=/home/lucas/.Xauthority
+
+export oc=/home/lucas/programming/embedded/ocelot
+export dh=/home/lucas/programming/embedded/dash
+export la=/home/lucas/.local/share/Terraria/tModLoader/ModSources/LukaiAddons
+export tm=/home/lucas/second-hd/SteamLibrary/steamapps/common/tModLoader
+
+export ANDROID_HOME="${HOME}/android"
+export PATH="${PATH}:${ANDROID_HOME}/platform-tools";
+export PATH="${PATH}:${ANDROID_HOME}/cmdline-tools/bin";
